@@ -7,13 +7,13 @@ header .menu-toggle{color:#fff!important}
 header .nav-cta .btn-primary,header .main-nav .mobile-nav-cta{background:linear-gradient(125deg,#e449a5,#b62278)!important;color:#fff!important;border:1px solid rgba(255,255,255,.22)!important;box-shadow:0 6px 18px rgba(101,12,80,.26)!important}
 header .nav-cta .btn-primary:hover,header .main-nav .mobile-nav-cta:hover{background:linear-gradient(125deg,#f058b1,#ca288c)!important;box-shadow:0 9px 23px rgba(101,12,80,.34)!important}
 header .logo-img{border-radius:7px}
-/* Ilustraciones a tamaño protagonista, próximas a los extremos y sin cubrir la columna central. */
-.hero-side-img{display:block!important;width:clamp(320px,30vw,510px)!important;max-width:33vw!important;height:auto;object-fit:contain;pointer-events:none}
-.hero-side-img.left{left:-3.8%!important}
-.hero-side-img.right{right:-3.8%!important}
+/* Ilustraciones laterales al 85 % del tamaño anterior, con la izquierda ligeramente más alta. */
+.hero-side-img{display:block!important;width:clamp(272px,25.5vw,433.5px)!important;max-width:28.05vw!important;height:auto;object-fit:contain;pointer-events:none}
+.hero-side-img.left{left:-3.8%!important;top:46%!important}
+.hero-side-img.right{right:-3.8%!important;top:52%!important}
 /* Mantener sólo el auténtico widget n8n, encima del botón de WhatsApp. */
 #n8n-chat .chat-window-toggle,#n8n-chat [class*="chat-window-toggle"]{position:fixed!important;right:24px!important;bottom:88px!important;left:auto!important;top:auto!important;z-index:10060!important;background:#193c82!important;color:#fff!important;width:56px!important;height:56px!important;margin:0!important}
 #n8n-chat .chat-window,#n8n-chat [class*="chat-window"]:not([class*="toggle"]){z-index:10061}
-@media(max-width:1180px){.hero-side-img{display:block!important;width:clamp(225px,28vw,360px)!important;max-width:30vw!important;opacity:1}.hero-side-img.left{left:-4%!important}.hero-side-img.right{right:-4%!important}.hero-inner{max-width:720px}}
+@media(max-width:1180px){.hero-side-img{display:block!important;width:clamp(191.25px,23.8vw,306px)!important;max-width:25.5vw!important;opacity:1}.hero-side-img.left{left:-4%!important}.hero-side-img.right{right:-4%!important}.hero-inner{max-width:720px}}
 @media(max-width:900px){header nav.main-nav.is-open{background:#244897!important;border-top-color:rgba(255,255,255,.22)!important}header nav.main-nav.is-open>a:not(.mobile-nav-cta){color:#fff!important}.hero-side-img{display:none!important}}
 @media(max-width:640px){header .nav-wrap{min-height:70px}.floating-cta{right:16px;bottom:16px}#n8n-chat .chat-window-toggle,#n8n-chat [class*="chat-window-toggle"]{right:16px!important;bottom:72px!important;width:48px!important;height:48px!important}}
