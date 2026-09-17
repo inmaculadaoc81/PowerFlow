@@ -1,0 +1,3 @@
+/* Iconografía SVG lineal de servicios y beneficios de PowerFlow. */
+.solutions-grid .sol-card .sol-icon svg.ic{display:block;width:29px;height:29px;flex-shrink:0;color:var(--pf-royal,#345fc2);stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
+.why-list .why-item .why-icon svg.ic{display:block;width:22px;height:22px;flex-shrink:0;color:#f0b5df;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
