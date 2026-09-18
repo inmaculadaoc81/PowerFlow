@@ -31,9 +31,11 @@ contraseñas ni secretos al repositorio. Comprobar una entrega real después del
 despliegue.
 
 CHATBOT
-La integración de n8n necesita una URL de webhook real. Por seguridad no se
-inicializa con el marcador PENDIENTE_URL_WEBHOOK_N8N_POWERFLOW. Sustituirlo por
-la URL HTTPS válida cuando el flujo esté preparado y autorizado.
+La integración de n8n usa el webhook compartido del Grupo N8nLabs
+(powerflow-n8n-chat.js), el mismo que usan FlujoPro y DataLabs — confirmado
+intencional por el cliente. (Esta nota sustituye una advertencia anterior sobre
+un marcador PENDIENTE_URL_WEBHOOK_N8N_POWERFLOW que ya no existe en el código;
+el README no se había actualizado tras el cambio.)
 
 CALENDARIO
 Es HTML estático, no WordPress: el shortcode [cal_custom] no se ejecuta aquí.
@@ -42,3 +44,39 @@ Se usa el iframe de la misma agenda con vista mensual y tema claro.
 SEO
 El título, la descripción, la URL canónica, Open Graph, datos estructurados,
 robots.txt y sitemap.xml utilizan el dominio de PowerFlow.
+
+────────────────────────────────────────────────────────────
+REVISIÓN COMPLETA (a petición del cliente: "revisa este repositorio",
+mismo alcance que en FlujoPro y DataLabs)
+────────────────────────────────────────────────────────────
+
+BUG REAL — el enlace "Nosotros" del menú principal apuntaba a
+"#nosotros", pero la sección real tiene id="sobre-powerflow" (el
+footer ya usaba el enlace correcto, "#sobre-powerflow", para el mismo
+destino). El del menú principal no llevaba a ningún sitio. Corregido.
+
+BUG REAL — package.json tenía el nombre de otro repositorio
+("smartsheets-automatizaciones-excel"). Corregido a
+"powerflow-automatizacion-power-automate". El resto del backend
+(api/contacto.js) ya estaba bien escrito específicamente para
+PowerFlow.
+
+BUG REAL — 6 archivos JS/CSS existían en el repositorio pero no
+estaban enlazados ni cargados por ningún otro archivo (mismo patrón
+que en FlujoPro): powerflow-activate.js, powerflow-chat.js,
+editorial-enhancements.js, site-enhancements.js, hero-buttons.css,
+typography-layout.css. Todo lo que aportaban ya estaba cubierto por
+los archivos realmente activos (los botones "Agendar cita"/"Atención
+telefónica" ya tienen su propio degradado en powerflow.css, la
+tarjeta "Sobre PowerFlow" ya tiene su estilo en powerflow.css +
+powerflow-restoration.css). Eliminados.
+
+Corregido también un comentario obsoleto en cal-booking.css que
+seguía mencionando "SmartSheets".
+
+VERIFICADO (todo correcto, sin más cambios necesarios): title/meta/
+canonical/og, JSON-LD, teléfono y WhatsApp (consistentes en todas sus
+apariciones), enlace de Google Maps y el iframe embebido (usa el
+place_id correcto de PowerFlow, no el de otro repositorio),
+robots.txt/sitemap.xml, resto de anclas internas, formulario (los
+campos coinciden exactamente con lo que espera api/contacto.js).
