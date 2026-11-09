@@ -80,3 +80,14 @@ apariciones), enlace de Google Maps y el iframe embebido (usa el
 place_id correcto de PowerFlow, no el de otro repositorio),
 robots.txt/sitemap.xml, resto de anclas internas, formulario (los
 campos coinciden exactamente con lo que espera api/contacto.js).
+
+BLOG (/blog):
+- Los artículos NO viven en este repositorio: los genera y publica el agente
+  SEO de Kelatos (Agentes V2 → organización «PowerFlow», clave powerflow)
+  y se leen en vivo de la API pública de Kelatos, sin token:
+  https://db.affirmatechnology.com/kelatos-api/publico/blog?org=powerflow
+- api/blog.js + lib/blog.js generan /blog y /blog/<slug> en el servidor
+  (copian cabecera, pie, WhatsApp, cookies y powerflow.js de index.html).
+- api/sitemap.js genera /sitemap.xml (se eliminó el sitemap.xml estático).
+- Estilos en blog.css. Enlace «Blog» en el menú (escritorio y móvil) y en el pie.
+- vercel.json redirige a la home las URLs antiguas; el blog queda fuera.

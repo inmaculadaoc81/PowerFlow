@@ -17,3 +17,6 @@ header .logo-img{border-radius:7px}
 @media(max-width:1180px){.hero-side-img{display:block!important;width:clamp(162.5625px,20.23vw,260.1px)!important;max-width:21.675vw!important;opacity:1}.hero-side-img.left{left:4%!important}.hero-side-img.right{right:4%!important}.hero-inner{max-width:720px}}
 @media(max-width:900px){header nav.main-nav.is-open{background:#244897!important;border-top-color:rgba(255,255,255,.22)!important}header nav.main-nav.is-open>a:not(.mobile-nav-cta){color:#fff!important}.hero-side-img{display:none!important}}
 @media(max-width:640px){header .nav-wrap{min-height:70px}.floating-cta{right:16px;bottom:16px}#n8n-chat .chat-window-toggle,#n8n-chat [class*="chat-window-toggle"]{right:16px!important;bottom:72px!important;width:48px!important;height:48px!important}}
+
+/* Menú hamburguesa hasta 1080px: el desplegable abierto mantiene el fondo azul y los enlaces en blanco */
+@media(max-width:1080px){header nav.main-nav.is-open{background:#244897!important;border-top-color:rgba(255,255,255,.22)!important}header nav.main-nav.is-open>a:not(.mobile-nav-cta){color:#fff!important}}

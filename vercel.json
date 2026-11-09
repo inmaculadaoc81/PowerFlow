@@ -1,6 +1,14 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
+  "functions": {
+    "api/blog.js": { "includeFiles": "index.html" }
+  },
+  "rewrites": [
+    { "source": "/blog", "destination": "/api/blog" },
+    { "source": "/blog/:slug", "destination": "/api/blog?slug=:slug" },
+    { "source": "/sitemap.xml", "destination": "/api/sitemap" }
+  ],
   "redirects": [
     {
       "source": "/sitemap_index.xml",
@@ -13,7 +21,7 @@
       "permanent": true
     },
     {
-      "source": "/((?!(?:powerflow-social-colors\\.css|powerflow-header-hero\\.css|powerflow-restoration\\.css|powerflow-restoration\\.js|powerflow-social-colors|powerflow-n8n-chat\\.css|mobile-navigation\\.css|powerflow-clients\\.css|powerflow-header-hero|powerflow-n8n-chat\\.js|powerflow-restoration|powerflow-n8n-chat|mobile-navigation|powerflow-clients|social-footer\\.css|cal-booking\\.css|powerflow\\.css|social-footer|package\\.json|powerflow\\.js|cal-booking|sitemap\\.xml|vercel\\.json|index\\.html|README\\.txt|robots\\.txt|powerflow|style\\.css|_vercel|package|sitemap|README|robots|vercel|index|style|api|img)(?:[/.]|$)).+)",
+      "source": "/((?!(?:powerflow-social-colors\\.css|powerflow-header-hero\\.css|powerflow-restoration\\.css|powerflow-restoration\\.js|powerflow-social-colors|powerflow-n8n-chat\\.css|mobile-navigation\\.css|powerflow-clients\\.css|powerflow-header-hero|powerflow-n8n-chat\\.js|powerflow-restoration|powerflow-n8n-chat|mobile-navigation|powerflow-clients|social-footer\\.css|cal-booking\\.css|powerflow\\.css|social-footer|package\\.json|powerflow\\.js|cal-booking|sitemap\\.xml|vercel\\.json|index\\.html|README\\.txt|robots\\.txt|powerflow|style\\.css|_vercel|package|sitemap|README|robots|vercel|index|style|blog|api|img)(?:[/.]|$)).+)",
       "destination": "/",
       "permanent": true
     }
